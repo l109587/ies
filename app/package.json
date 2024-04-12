@@ -1,0 +1,48 @@
+{
+  "name": "electron-builder",
+  "author": "lhb, Inc <lhb123@gmail.com>",
+  "version": "1.0.0",
+  "main": "main.js",
+  "homepage": "https://www.electron.com",
+  "description": "一个umi+electron脚手架项目",
+  "scripts": {
+    "build:linux": "electron-builder --linux",
+    "build:win": " electron-builder --win --x64",
+    "build:mac": " electron-builder --mac"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^24.2.0",
+    "electron-builder": "^23.6.0"
+  },
+  "build": {
+    "compression": "maximum",
+    "productName": "electron-umi",
+    "appId": "electron-umi",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "build/**/*",
+      "main.js",
+      "!node_modules/"
+    ],
+    "extends": null,
+    "win": {
+      "target": ["nsis", "zip"]
+    },
+    "linux": {
+      "target": ["AppImage","tar.gz"]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Electron",
+      "perMachine": false
+    }
+  },
+  "dependencies": {}
+}

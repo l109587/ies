@@ -1,0 +1,104 @@
+.inputItem {
+  height: 40px;
+  border-radius: 0;
+  background: url(../../../assets/img/bg-input.png) no-repeat;
+  background-size: 100% 100%;
+  color: #fff !important;
+  border: 0;
+  :global {
+    .ant-input-affix-wrapper > input.ant-input {
+      background-color: rgba(255, 255, 255, 0);
+      color: #fff;
+    }
+    .ant-input-suffix .ant-input-clear-icon {
+      color: #fff !important;
+      font-size: 14;
+    }
+    .ant-input-affix-wrapper {
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0);
+      border: 0;
+    }
+    .ant-input {
+      background-color: rgba(255, 255, 255, 0);
+      color: #fff;
+    }
+  }
+}
+.keyboard {
+  :global {
+    .hg-candidate-box {
+      background-color: rgba(255, 255, 255, 0);
+      top: 60px;
+    }
+
+    .hg-theme-default {
+      background-color: rgba(255, 255, 255, 0);
+      padding: 10px 5px 5px 5px;
+      .hg-button {
+        background: url(../../../assets/img/bg-keybtn.png) no-repeat;
+        background-size: 100% 100%;
+        border: 0;
+      }
+      .hg-rows .hg-row:first-child {
+        .hg-button:last-child {
+          background: url(../../../assets/img/keybtn-102.png) no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+      .hg-rows .hg-row:last-child {
+        .hg-button:first-child {
+          background: url(../../../assets/img/keybtn-84.png) no-repeat;
+          background-size: 100% 100%;
+        }
+        .hg-button:last-child {
+          background: url(../../../assets/img/keybtn-560.png) no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+      .hg-rows .hg-row:nth-child(3) {
+        .hg-button:last-child {
+          background: url(../../../assets/img/keybtn-84.png) no-repeat;
+          background-size: 100% 100%;
+        }
+        .hg-button:first-child {
+          background: url(../../../assets/img/keybtn-84.png) no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+      .hg-rows .hg-row:nth-child(4) {
+        .hg-button:last-child {
+          background: url(../../../assets/img/keybtn-77.png) no-repeat;
+          background-size: 100% 100%;
+        }
+        .hg-button:first-child {
+          background: url(../../../assets/img/keybtn-77.png) no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+      .hg-rows .hg-row:nth-child(2) {
+        .hg-button:first-child {
+          background: url(../../../assets/img/keybtn-58.png) no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+    }
+  }
+}
+.keydrawer {
+  margin: 0 18px 0 18px;
+  width: auto !important;
+  height: auto !important;
+  background: rgba(255, 255, 255, 0) !important;
+  :global {
+    .ant-drawer-wrapper-body {
+      height: 290px;
+      color: #fff;
+      .ant-drawer-body {
+        padding: 10px 24px 5px 24px;
+        background: url(../../../assets/img/bg-keyborder.png) no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+  }
+}
