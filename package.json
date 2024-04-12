@@ -1,0 +1,48 @@
+{
+  "private": true,
+  "scripts": {
+    "start": " cross-env MOCK=on umi  dev",
+    "build": "umi build",
+    "postinstall": "umi generate tmp",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage",
+    "electron": "electron .",
+    "electron-dev": "concurrently \"cross-env BROWSER=none yarn start\" \"wait-on http://localhost:8000 && cross-env NODE_ENV=development electron app/main.js\""
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/pro-layout": "^6.5.0",
+    "antd": "^5.4.7",
+    "axios": "^1.4.0",
+    "react": "17.x",
+    "react-dom": "17.x",
+    "react-simple-keyboard": "^3.5.79",
+    "umi": "^3.5.40"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@umijs/preset-react": "1.x",
+    "@umijs/test": "^3.5.40",
+    "concurrently": "8.0.1",
+    "cross-env": "^7.0.3",
+    "electron": "^24.4.0",
+    "lint-staged": "^10.0.7",
+    "mockjs": "^1.1.0",
+    "prettier": "^2.2.0",
+    "typescript": "^4.1.2",
+    "wait-on": "^7.0.1",
+    "yorkie": "^2.0.0"
+  }
+}
